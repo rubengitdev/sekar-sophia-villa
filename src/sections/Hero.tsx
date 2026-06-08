@@ -42,7 +42,7 @@ export function Hero({ currentLang, translations, onExploreClick, onBookClick }:
         <img
           src={getDirectImageUrl(HERO_PHOTOS.backgroundImage)}
           alt="Sekar Sophia Sunset Pool View"
-          className="h-full w-full object-cover opacity-90 transition-opacity duration-700"
+          className="h-full w-full object-cover opacity-80 transition-opacity duration-700"
           referrerPolicy="no-referrer"
         />
         {/* Only a subtle bottom fade-out to blend perfectly with the ivory page background */}

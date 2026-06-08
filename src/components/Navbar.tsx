@@ -174,7 +174,7 @@ export function Navbar({ currentLang, onLanguageChange, translations, activeTab,
             <button
               id="header-book-cta"
               onClick={() => handleItemClick("reserve")}
-              className={`flex items-center space-x-1.5 px-4 py-2 rounded text-[10px] font-bold uppercase tracking-widest shadow-xs transition-all duration-300 cursor-pointer border ${
+              className={`flex items-center space-x-1.5 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest shadow-xs transition-all duration-300 cursor-pointer border ${
                 activeTab === "reserve"
                   ? "bg-gold text-white border-gold"
                   : "bg-stone-900 hover:bg-gold text-white border-stone-900 hover:border-gold"
