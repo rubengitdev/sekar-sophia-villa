@@ -1,0 +1,6 @@
+{
+  "name": "Sekar Sophia Villa",
+  "description": "Art-crafted boutique villa in Kasongan, Bantul. Exquisite tropical resort spaces, private salt-water pool, and bespoke hospitality by Sophia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
