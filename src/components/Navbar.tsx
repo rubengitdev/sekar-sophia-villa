@@ -7,6 +7,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, Globe, Calendar } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { LanguageCode, TranslationSet } from "../types";
+import sekarLogo from "../data/photos/sekar_logo.png";
 
 interface NavbarProps {
   /** Active language selection indicator */
@@ -108,18 +109,18 @@ export function Navbar({ currentLang, onLanguageChange, translations, activeTab,
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between">
-          {/* Logo Brand / Elegant Charcoal & Gold */}
+          {/* Logo Brand */}
           <button
             id="brand-logo-btn"
             onClick={() => handleItemClick("story")}
-            className="group flex flex-col items-start text-left focus:outline-none cursor-pointer"
+            className="group flex items-center focus:outline-none cursor-pointer"
+            aria-label="Sekar Sophia Villa home"
           >
-            <span className="font-serif text-lg font-bold tracking-tight text-stone-900 md:text-xl transition-colors duration-300 group-hover:text-gold">
-              Sekar Sophia <span className="text-gold">Villa</span>
-            </span>
-            <span className="font-mono text-[9px] tracking-[3px] uppercase text-stone-500 font-medium">
-              Kasongan • Bantul
-            </span>
+            <img
+              src={sekarLogo}
+              alt="Sekar Sophia Villa"
+              className="h-11 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80 md:h-12"
+            />
           </button>
 
           {/* Desktop Navigation Links */}
@@ -217,11 +218,13 @@ export function Navbar({ currentLang, onLanguageChange, translations, activeTab,
             exit={{ opacity: 0, y: -10 }}
             className="fixed inset-0 z-45 bg-[#fdfcfb] pt-24 px-6 flex flex-col items-center justify-start min-h-screen"
           >
-            <div className="text-center mb-10">
-              <h3 className="font-serif text-2xl font-bold tracking-tight text-stone-900">
-                Sekar Sophia <span className="text-gold">Villa</span>
-              </h3>
-              <p className="font-mono text-[10px] tracking-widest text-stone-500 uppercase mt-1">
+            <div className="text-center mb-10 flex flex-col items-center">
+              <img
+                src={sekarLogo}
+                alt="Sekar Sophia Villa"
+                className="h-16 w-auto object-contain"
+              />
+              <p className="font-mono text-[10px] tracking-widest text-stone-500 uppercase mt-2">
                 Bantul, Yogyakarta
               </p>
             </div>
