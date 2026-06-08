@@ -154,6 +154,7 @@ export interface AttractionItem {
   duration: string;
   image: string;
   description: Record<LanguageCode, string>;
+  googleMapsUrl: string;
 }
 
 /** Customer review rating cards with stars and avatar files */

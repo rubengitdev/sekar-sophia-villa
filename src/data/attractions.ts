@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { AttractionItem } from "../types";
+import type { AttractionItem } from "../types";
 import { ATTRACTION_PHOTOS } from "./photos";
 
 /**
@@ -27,6 +27,7 @@ export const ATTRACTIONS: AttractionItem[] = [
       en: "The historic hub of stunning terracotta ceramics. Watch local artisans shape clay or try a pottery workshop yourself.",
       id: "Pusat sejarah kerajinan keramik tanah liat yang indah. Saksikan seniman lokal memahat tanah liat langsung.",
     },
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Kasongan%20Ceramic%20Pottery%20Village%20Bantul%20Yogyakarta",
   },
   {
     id: "att-kraton",
@@ -42,6 +43,7 @@ export const ATTRACTIONS: AttractionItem[] = [
       en: "The living monument of Javanese heritage, showcasing majestic architectural details, classic courts, and dynamic museums.",
       id: "Istana kesultanan Jawa yang aktif, menyuguhkan detil ukir emas megah, museum pusaka, dan tarian klasik gamelan.",
     },
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Kraton%20Yogyakarta%20Royal%20Palace",
   },
   {
     id: "att-parangtritis",
@@ -57,6 +59,7 @@ export const ATTRACTIONS: AttractionItem[] = [
       en: "An iconic volcanic black-sand beach. Experience magical golden sunsets over towering limestone hills and rolling tides.",
       id: "Pantai pasir hitam legendaris. Rasakan pesona matahari tenggelam di balik tebing batuan tinggi samudera selatan.",
     },
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Parangtritis%20Beach%20Yogyakarta",
   },
   {
     id: "att-restaurants",
@@ -72,5 +75,6 @@ export const ATTRACTIONS: AttractionItem[] = [
       en: "Lush garden bistros, rustic local coffee houses, and traditional culinary stalls serving Bantul's famous hot Mangut Lele.",
       id: "Bistro kebun rimbun, kedai kopi perbukitan yang tenang, dan warung makan legendaris Mangut Lele Kasongan.",
     },
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Restaurants%20near%20Kasongan%20Bantul%20Yogyakarta",
   },
 ];

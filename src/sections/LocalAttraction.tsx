@@ -83,10 +83,14 @@ export function LocalAttraction({ currentLang, translations }: LocalAttractionPr
         {/* Attractions Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredAttractions.map((attSnippet) => (
-            <div
+            <a
               id={`att-item-${attSnippet.id}`}
               key={attSnippet.id}
-              className="flex flex-col sm:flex-row bg-white border border-stone-200/60 hover:border-gold/20 rounded-xl overflow-hidden shadow-2xs hover:shadow-sm transition-all duration-350 sm:min-h-56"
+              href={attSnippet.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${currentLang === "en" ? "Open Google Maps for" : "Buka Google Maps untuk"} ${attSnippet.name[currentLang]}`}
+              className="flex flex-col sm:flex-row bg-white border border-stone-200/60 hover:border-gold/20 rounded-xl overflow-hidden shadow-2xs hover:shadow-sm transition-all duration-350 sm:min-h-56 cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold/40 focus:ring-offset-2 focus:ring-offset-cream"
             >
               
               {/* Image side */}
@@ -133,7 +137,7 @@ export function LocalAttraction({ currentLang, translations }: LocalAttractionPr
 
               </div>
 
-            </div>
+            </a>
           ))}
         </div>
 
