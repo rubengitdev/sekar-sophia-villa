@@ -4,9 +4,9 @@
  */
 
 import React from "react";
-import { Hero } from "../Hero";
-import { About } from "../About";
-import { LanguageCode, TranslationSet } from "../../types";
+import { Hero } from "../sections/Hero";
+import { About } from "../sections/About";
+import { LanguageCode, TranslationSet } from "../types";
 
 interface StoryPageProps {
   currentLang: LanguageCode;

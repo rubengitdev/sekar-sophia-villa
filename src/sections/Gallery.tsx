@@ -84,7 +84,7 @@ export function Gallery({ currentLang, translations }: GalleryProps) {
               onClick={() => setActiveFilter(cat.value)}
               className={`px-4 py-2 rounded-lg text-[10px] tracking-wider uppercase font-bold transition-all duration-300 cursor-pointer focus:outline-none ${
                 activeFilter === cat.value
-                  ? "bg-stone-900 text-gold shadow-xs"
+                  ? "bg-stone-900 text-white shadow-xs"
                   : "bg-white border border-stone-200 text-stone-600 hover:text-stone-900 hover:border-stone-400"
               }`}
             >

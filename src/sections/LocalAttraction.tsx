@@ -60,7 +60,7 @@ export function LocalAttraction({ currentLang, translations }: LocalAttractionPr
           <p className="font-sans text-sm sm:text-base text-stone-600 mt-3 font-light leading-relaxed">
             {translations.attractionsSubtitle}
           </p>
-        </div>
+        </div>  
 
         {/* Filter Chips */}
         <div className="flex flex-wrap gap-2 mb-10 justify-start">
@@ -71,7 +71,7 @@ export function LocalAttraction({ currentLang, translations }: LocalAttractionPr
               onClick={() => setActiveCategory(cat.value)}
               className={`px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer focus:outline-none ${
                 activeCategory === cat.value
-                  ? "bg-stone-900 text-gold shadow-xs"
+                  ? "bg-stone-900 text-white shadow-xs"
                   : "bg-white border border-stone-200 text-stone-600 hover:text-stone-900 hover:border-stone-400"
               }`}
             >

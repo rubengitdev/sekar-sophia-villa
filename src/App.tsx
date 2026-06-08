@@ -5,10 +5,10 @@
 
 import React, { useState } from "react";
 import { Navbar } from "./components/Navbar";
-import { StoryPage } from "./sections/pages/StoryPage";
-import { LivingPage } from "./sections/pages/LivingPage";
-import { DiscoverPage } from "./sections/pages/DiscoverPage";
-import { ReservePage } from "./sections/pages/ReservePage";
+import { StoryPage } from "./pages/StoryPage";
+import { LivingPage } from "./pages/LivingPage";
+import { DiscoverPage } from "./pages/DiscoverPage";
+import { ReservePage } from "./pages/ReservePage";
 import { LANGUAGES, VILLA_CONFIG } from "./data/villaData";
 import { LanguageCode } from "./types";
 import { ChevronUp } from "lucide-react";

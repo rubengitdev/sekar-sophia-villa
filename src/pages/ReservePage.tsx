@@ -4,10 +4,10 @@
  */
 
 import React from "react";
-import { Rates } from "../Rates";
-import { Reviews } from "../Reviews";
-import { Contact } from "../Contact";
-import { LanguageCode, TranslationSet } from "../../types";
+import { Rates } from "../sections/Rates";
+import { Reviews } from "../sections/Reviews";
+import { Contact } from "../sections/Contact";
+import { LanguageCode, TranslationSet } from "../types";
 
 interface ReservePageProps {
   currentLang: LanguageCode;

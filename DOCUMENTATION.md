@@ -41,20 +41,20 @@ Below is the directory breakdown of the codebase:
   │    ├── Lightbox.tsx     # Full-screen cinematic photo viewer carousel
   │    └── LazyImage.tsx    # Optimized progressive image loader (if needed)
   └── /sections
-       ├── /pages           # Unified chapter navigation views
-       │    ├── StoryPage.tsx    # Chapter containing Hero & About
-       │    ├── LivingPage.tsx   # Chapter containing Accommodation & Facilities
-       │    ├── DiscoverPage.tsx # Chapter containing Gallery & LocalAttraction
-       │    └── ReservePage.tsx  # Chapter containing Rates, Reviews & Contact
-       ├── Hero.tsx         # Dramatic display title, trust stats, and main CTAs
-       ├── About.tsx        # Story timeline, property size stats, and history
-       ├── Accommodation.tsx# High-fidelity tabbed suite views, dimensions, and occupancy
-       ├── Facilities.tsx   # Bento grid showcasing private inclusions
-       ├── Gallery.tsx      # Filterable multi-view photography showcase
-       ├── LocalAttraction.tsx # Curated map coordinates & beaches (with distance tags)
-       ├── Rates.tsx        # High/low season sheets, check-in timelines, and policies
-       ├── Reviews.tsx      # Premium slideable feedback cards
-       └── Contact.tsx      # Contact details, third-party channels (Airbnb, Tiket), and Embed Maps
+  │     ├── Hero.tsx         # Dramatic display title, trust stats, and main CTAs
+  │     ├── About.tsx        # Story timeline, property size stats, and history
+  │     ├── Accommodation.tsx# High-fidelity tabbed suite views, dimensions, and occupancy
+  │     ├── Facilities.tsx   # Bento grid showcasing private inclusions
+  │     ├── Gallery.tsx      # Filterable multi-view photography showcase
+  │     ├── LocalAttraction.tsx # Curated map coordinates & beaches (with distance tags)
+  │     ├── Rates.tsx        # High/low season sheets, check-in timelines, and policies
+  │     ├── Reviews.tsx      # Premium slideable feedback cards
+  │     └── Contact.tsx      # Contact details, third-party channels (Airbnb, Tiket), and Embed Maps
+  └── /pages           # Unified chapter navigation views
+  │     ├── StoryPage.tsx    # Chapter containing Hero & About
+  │     ├── LivingPage.tsx   # Chapter containing Accommodation & Facilities
+  │     ├── DiscoverPage.tsx # Chapter containing Gallery & LocalAttraction
+  │     └── ReservePage.tsx  # Chapter containing Rates, Reviews & Contact
 ```
 
 ---

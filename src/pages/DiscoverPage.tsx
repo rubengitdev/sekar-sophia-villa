@@ -4,9 +4,9 @@
  */
 
 import React from "react";
-import { Gallery } from "../Gallery";
-import { LocalAttraction } from "../LocalAttraction";
-import { LanguageCode, TranslationSet } from "../../types";
+import { Gallery } from "../sections/Gallery";
+import { LocalAttraction } from "../sections/LocalAttraction";
+import { LanguageCode, TranslationSet } from "../types";
 
 interface DiscoverPageProps {
   currentLang: LanguageCode;

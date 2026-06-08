@@ -4,9 +4,9 @@
  */
 
 import React from "react";
-import { Accommodation } from "../Accommodation";
-import { Facilities } from "../Facilities";
-import { LanguageCode, TranslationSet } from "../../types";
+import { Accommodation } from "../sections/Accommodation";
+import { Facilities } from "../sections/Facilities";
+import { LanguageCode, TranslationSet } from "../types";
 
 interface LivingPageProps {
   currentLang: LanguageCode;

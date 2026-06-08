@@ -15,7 +15,7 @@ export const VILLA_CONFIG: VillaConfig = {
   name: "Sekar Sophia Villa",
   owner: "Sophia",
   contact: {
-    phone: "6281234567890", // Sophia's customized WhatsApp number format (without '+' or leading '0' for API)
+    phone: "62882003453869", // Sophia's customized WhatsApp number format (without '+' or leading '0' for API)
     email: "sekarsophiavilla@gmail.com",
     address: {
       en: "Kasongan, Bantul Regency, Special Region of Yogyakarta, Indonesia",

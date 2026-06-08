@@ -79,7 +79,7 @@ export function Accommodation({ currentLang, translations }: AccommodationProps)
               onClick={() => handleRoomChange(room.id)}
               className={`flex-1 min-w-[124px] text-center py-2 px-4 rounded-lg text-[10px] tracking-wider uppercase font-bold transition-all duration-300 cursor-pointer focus:outline-none ${
                 activeRoomId === room.id
-                  ? "bg-white text-gold shadow-sm font-bold border border-stone-200/40"
+                  ? "bg-white text-gold shadow-sm"
                   : "text-stone-500 hover:text-stone-900"
               }`}
             >
