@@ -22,7 +22,7 @@ interface LivingPageProps {
  * 2. Facilities: Grid-aligned Bento modules presenting shared visual premium utilities (fiber internet, 
  *    saltwater pool, customized fire-pit lounge, and hand-molded pottery kitchen components).
  */
-export function LivingPage({ currentLang, translations }: LivingPageProps) {
+export function RoomAndFacilityPage({ currentLang, translations }: LivingPageProps) {
   return (
     <div id="living-page" className="space-y-4">
       {/* SECTION 1: Tabbed Accommodations & Carousels */}

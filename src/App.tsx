@@ -5,9 +5,9 @@
 
 import React, { useState } from "react";
 import { Navbar } from "./components/Navbar";
-import { StoryPage } from "./pages/StoryPage";
-import { LivingPage } from "./pages/LivingPage";
-import { DiscoverPage } from "./pages/DiscoverPage";
+import { StoryPage } from "./pages/About";
+import { LivingPage } from "./pages/RoomAndFacilityPage";
+import { DiscoverPage } from "./pages/DiscoverPage";  
 import { ReservePage } from "./pages/ReservePage";
 import { LANGUAGES, VILLA_CONFIG } from "./data/villaData";
 import { LanguageCode } from "./types";
