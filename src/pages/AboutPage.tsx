@@ -26,7 +26,7 @@ interface StoryPageProps {
  * 2. About Section: Chronological overview of Sophia's artistic vision, property outline, 
  *    Bantul clay artisans, and structural parameters accompanied by organic imagery.
  */
-export function StoryPage({ currentLang, translations, onExploreClick, onBookClick }: StoryPageProps) {
+export function AboutPage({ currentLang, translations, onExploreClick, onBookClick }: StoryPageProps) {
   return (
     <div id="story-page" className="animate-fade-in text-stone-800">
       {/* 1. HERO - Dramatic visual overlay spotlighting direct conversion controls */}

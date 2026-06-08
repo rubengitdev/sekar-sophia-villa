@@ -5,8 +5,8 @@
 
 import React, { useState } from "react";
 import { Navbar } from "./components/Navbar";
-import { StoryPage } from "./pages/About";
-import { LivingPage } from "./pages/RoomAndFacilityPage";
+import { AboutPage } from "./pages/AboutPage";
+import { RoomAndFacilityPage } from "./pages/RoomAndFacilityPage";
 import { DiscoverPage } from "./pages/DiscoverPage";  
 import { ReservePage } from "./pages/ReservePage";
 import { LANGUAGES, VILLA_CONFIG } from "./data/villaData";
@@ -28,8 +28,8 @@ export default function App() {
   // Localization storage - standard codes supported: "en" | "id" 
   const [currentLang, setCurrentLang] = useState<LanguageCode>("en");
   
-  // Tab/Chapter router state - supports: "story" | "living" | "discover" | "reserve"
-  const [activeTab, setActiveTab] = useState<string>("story");
+  // Tab/Chapter router state - supports: "about" | "roomandfacility" | "discover" | "reserve"
+  const [activeTab, setActiveTab] = useState<string>("about");
 
   // Retrieve matching multilingual dictionaries based on active selection
   const translations = LANGUAGES[currentLang];
@@ -79,17 +79,17 @@ export default function App() {
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            {activeTab === "story" && (
-              <StoryPage
+            {activeTab === "about" && (
+              <AboutPage
                 currentLang={currentLang}
                 translations={translations}
-                onExploreClick={() => handleFooterLinkClick("living")}
+                onExploreClick={() => handleFooterLinkClick("roomandfacility")}
                 onBookClick={() => handleFooterLinkClick("reserve")}
               />
             )}
 
-            {activeTab === "living" && (
-              <LivingPage currentLang={currentLang} translations={translations} />
+            {activeTab === "roomandfacility" && (
+              <RoomAndFacilityPage currentLang={currentLang} translations={translations} />
             )}
 
             {activeTab === "discover" && (
@@ -142,10 +142,10 @@ export default function App() {
                 {currentLang === "en" ? "Quick Chapters" : "Halaman Utama"}
               </span>
               <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-stone-500 text-[11px] font-medium">
-                <button onClick={() => handleFooterLinkClick("story")} className="hover:text-gold cursor-pointer">
+                <button onClick={() => handleFooterLinkClick("about")} className="hover:text-gold cursor-pointer">
                   {currentLang === "en" ? "Story" : "Kisah Kami"}
                 </button>
-                <button onClick={() => handleFooterLinkClick("living")} className="hover:text-gold cursor-pointer">
+                <button onClick={() => handleFooterLinkClick("roomandfacility")} className="hover:text-gold cursor-pointer">
                   {currentLang === "en" ? "The Spaces" : "Kamar & Fasilitas"}
                 </button>
                 <button onClick={() => handleFooterLinkClick("discover")} className="hover:text-gold cursor-pointer">

@@ -16,7 +16,7 @@ interface NavbarProps {
   onLanguageChange: (lang: LanguageCode) => void;
   /** Localized text mappings containing active translations */
   translations: TranslationSet;
-  /** Unique active page identifier (e.g., 'story' | 'living') */
+  /** Unique active page identifier (e.g., 'about' | 'roomandfacility') */
   activeTab: string;
   /** Sets active page identifier and updates router state programmatically */
   setActiveTab: (tab: string) => void;
@@ -80,8 +80,8 @@ export function Navbar({ currentLang, onLanguageChange, translations, activeTab,
   }, []);
 
   const navItems = [
-    { label: currentLang === "en" ? "About" : "Kisah Kami", id: "story" },
-    { label: currentLang === "en" ? "Room & Facility" : "Kamar & Fasilitas", id: "living" },
+    { label: currentLang === "en" ? "About" : "Kisah Kami", id: "about" },
+    { label: currentLang === "en" ? "Room & Facility" : "Kamar & Fasilitas", id: "roomandfacility" },
     { label: currentLang === "en" ? "Discover" : "Galeri & Wisata", id: "discover" },
     { label: currentLang === "en" ? "Reserve" : "Pemesanan", id: "reserve" },
   ];
@@ -112,7 +112,7 @@ export function Navbar({ currentLang, onLanguageChange, translations, activeTab,
           {/* Logo Brand */}
           <button
             id="brand-logo-btn"
-            onClick={() => handleItemClick("story")}
+            onClick={() => handleItemClick("about")}
             className="group flex items-center focus:outline-none cursor-pointer"
             aria-label="Sekar Sophia Villa home"
           >

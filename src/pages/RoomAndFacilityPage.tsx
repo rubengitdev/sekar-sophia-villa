@@ -8,13 +8,13 @@ import { Accommodation } from "../sections/Accommodation";
 import { Facilities } from "../sections/Facilities";
 import { LanguageCode, TranslationSet } from "../types";
 
-interface LivingPageProps {
+interface RoomAndFacilityProps {
   currentLang: LanguageCode;
   translations: TranslationSet;
 }
 
 /**
- * LivingPage Component (Chapter 2: Spaces / Living)
+ * RoomAndFacilityPage Component (Chapter 2: Spaces / Living)
  * 
  * Manages the luxurious physical interior of Sekar Sophia Villa. The page splits into:
  * 1. Accommodation: Immersive tabbed layout detailing the Javanese suites (Master Suite, garden rooms, etc.)
@@ -22,7 +22,7 @@ interface LivingPageProps {
  * 2. Facilities: Grid-aligned Bento modules presenting shared visual premium utilities (fiber internet, 
  *    saltwater pool, customized fire-pit lounge, and hand-molded pottery kitchen components).
  */
-export function RoomAndFacilityPage({ currentLang, translations }: LivingPageProps) {
+export function RoomAndFacilityPage({ currentLang, translations }: RoomAndFacilityProps) {
   return (
     <div id="living-page" className="space-y-4">
       {/* SECTION 1: Tabbed Accommodations & Carousels */}
