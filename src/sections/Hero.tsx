@@ -61,7 +61,7 @@ export function Hero({ currentLang, translations, onExploreClick, onBookClick }:
             className="mb-6 flex items-center space-x-2 rounded-full border border-white/70 bg-white/70 px-4.5 py-1.5 font-mono text-[9px] sm:text-[10px] tracking-[4px] uppercase text-stone-900 font-bold shadow-2xs backdrop-blur-xs select-none"
           >
             <Sparkles className="h-3.5 w-3.5 text-gold fill-gold/10" />
-            <span>Boutique Villa Resort</span>
+            <span>Sekar Sophia Villa</span>
           </motion.div>
 
           {/* Elegant Display Headline */}

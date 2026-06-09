@@ -64,19 +64,19 @@ export function About({ currentLang, translations }: AboutProps) {
             {/* Quick stats grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4">
               <div className="border-t border-stone-200 pt-3">
-                <span className="font-serif text-2xl sm:text-3xl font-bold text-gold">2026</span>
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-gold">2022</span>
                 <p className="font-sans text-[10px] text-stone-500 mt-1 uppercase tracking-[0.1em] font-semibold">
                   {currentLang === "en" ? "Year Opened" : "Tahun Dibuka"}
                 </p>
               </div>
               <div className="border-t border-stone-200 pt-3">
-                <span className="font-serif text-2xl sm:text-3xl font-bold text-gold">450 m²</span>
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-gold">500 m²</span>
                 <p className="font-sans text-[10px] text-stone-500 mt-1 uppercase tracking-[0.1em] font-semibold">
                   {currentLang === "en" ? "Estate Area" : "Luas Lahan"}
                 </p>
               </div>
               <div className="border-t border-stone-200 pt-3 col-span-2 sm:col-span-1">
-                <span className="font-serif text-2xl sm:text-3xl font-bold text-gold">Joglo-Modern</span>
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-gold">Minimalist-Modern</span>
                 <p className="font-sans text-[10px] text-stone-500 mt-1 uppercase tracking-[0.1em] font-semibold">
                   {currentLang === "en" ? "Architecture" : "Arsitektur"}
                 </p>
