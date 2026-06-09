@@ -113,7 +113,7 @@ export interface AmenityDetail {
 export interface RoomSpec {
   size: string;
   beds: Record<LanguageCode, string>;
-  baths: string;
+  baths: Record<LanguageCode, string>;
   capacity: Record<LanguageCode, string>;
 }
 
@@ -123,8 +123,7 @@ export interface RoomDetails {
   name: Record<LanguageCode, string>;
   categoryName?: Record<LanguageCode, string>; // Optional clean label for tabs, e.g. "Temple Suite"
   badgeName?: Record<LanguageCode, string>;    // Optional collection label, e.g. "Premium Residence"
-  shortDescription: Record<LanguageCode, string>;
-  longDescription: Record<LanguageCode, string>;
+  roomDescription: Record<LanguageCode, string>;
   specs: RoomSpec;
   images: string[];
   features: Record<LanguageCode, string[]>;

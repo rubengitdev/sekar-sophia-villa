@@ -191,7 +191,7 @@ export function Accommodation({ currentLang, translations }: AccommodationProps)
                 {activeRoom.name[currentLang]}
               </h3>
               <p className="font-sans text-stone-600 font-light text-sm sm:text-base leading-relaxed mt-4">
-                {activeRoom.longDescription[currentLang]}
+                {activeRoom.roomDescription[currentLang]}
               </p>
             </div>
 
@@ -217,7 +217,7 @@ export function Accommodation({ currentLang, translations }: AccommodationProps)
                 <Bath className="h-4 w-4 text-gold shrink-0" />
                 <div>
                   <span className="block text-[10px] font-mono text-stone-500 uppercase tracking-wider">{translations.specBath}</span>
-                  <span className="text-xs sm:text-sm font-semibold text-stone-850 line-clamp-1">{activeRoom.specs.baths.split("(")[0]}</span>
+                  <span className="text-xs sm:text-sm font-semibold text-stone-850 line-clamp-1">{activeRoom.specs.baths[currentLang]}</span>
                 </div>
               </div>
 

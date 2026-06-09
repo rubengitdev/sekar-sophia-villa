@@ -14,87 +14,86 @@ import { SUITE_PHOTOS } from "./photos";
  */
 export const ROOMS: RoomDetails[] = [
   {
-    id: "suite-master",
+    id: "deluxe_room",
     name: {
-      en: "The Sophia Master Temple Suite",
-      id: "Sophia Master Temple Suite",
+      en: "Sekar Exclusive Deluxe Room",
+      id: "Kamar Deluxe Eksklusif Sekar",
     },
     categoryName: {
-      en: "Temple Suite",
-      id: "Temple Suite",
+      en: "Deluxe Room",
+      id: "Kamar Deluxe",
     },
     badgeName: {
-      en: "Premium Residence",
-      id: "Residensi Premium",
+      en: "Most Premium",
+      id: "Paling Premium",
     },
-    shortDescription: {
-      en: "A majestic integration of high-crafted teak paneling, floating king size bed, and romantic semi-outdoor stone tub.",
-      id: "Perpaduan agung panel kayu jati berkualitas, kasur ukuran King melayang, dan bak mandi batu semi-terbuka romantis.",
-    },
-    longDescription: {
-      en: "Our flagship suite features premium bespoke finishings that celebrate natural light. Floor-to-ceiling glass doors open directly to the central salt-water pool, allowing you to walk straight into the water at dawn. Dominated by luxurious organic fabrics, handcrafted ceramics, and a gorgeous private desk with sunset views.",
-      id: "Suite utama kami memiliki sentuhan akhir premium yang memuliakan cahaya alami. Pintu kaca setinggi langit-langit menghadap ke kolam renang air asin tengah, memungkinkan Anda melangkah langsung ke air di pagi hari. Dilengkapi kain organik mewah, keramik buatan tangan, dan meja kerja pribadi yang menawan.",
+    roomDescription: {
+      en: "Our most premium room, beautifully designed with an elegant and exclusive ambiance. It seamlessly blends modern, minimalist design with warm wooden accents and authentic Kasongan artistry. The perfect choice for guests seeking a truly special, comfortable, and memorable stay. This cozy retreat features a premium King-size bed and a spacious, modern bathroom.",
+      id: "Kamar paling premium yang dirancang dengan suasana elegan dan eksklusif. Perpaduan antara design yang modern, minimalist, dengan sentuhan kayu dan seni khas Kasongan. Pilihan sempurna untuk tamu yang menginginkan pengalaman menginap yang lebih istimewa, nyaman, dan berkesan. Kamar yang nyaman dilengkapi kasur berkualitas ukuran King, dengan kamar mandi yang luas dan modern.",
     },
     specs: {
-      size: "75 m²",
+      size: "35 m²",
       beds: {
-        en: "1 King Bed (Supreme Latex)",
-        id: "1 Ranjang King (Lateks Supreme)",
+        en: "1 King Size Bed",
+        id: "1 Kasur Ukuran King",
       },
-      baths: "1 En-Suite (Semi-Outdoor Stone Tub & Rain Shower)",
+      baths: {
+        en: "1 Indoor Bath",
+        id: "1 Kamar Mandi Dalam",
+      },
       capacity: {
-        en: "2 Adults (Extra bed available)",
-        id: "2 Dewasa (Kasur tambahan tersedia)",
+        en: "2 People (2 extra bed available)",
+        id: "2 Orang (2 Kasur tambahan tersedia)",
       },
     },
     images: SUITE_PHOTOS.templeSuite,
     features: {
-      en: ["Direct Pool Access", "King Size Draped Bed", "Outdoor Handcrafted Stone Tub", "Custom Teak Wardrobe", "Smart Air Conditioning", "Premium Organic Linens"],
-      id: ["Akses Kolam Renang Langsung", "Kasur King Kelambu Romantis", "Bathtub Batu Alam Terbuka", "Lemari Jati Kustom", "AC Pintar Hemat Energi", "Sprei Organik Premium"],
+      en: ["Closest Pool Access", "King Size Bed", "Eco-Friendly AC", "Android TV", "Mini Fridge", "Sofa Bed"],
+      id: ["Akses Terdekat Kolam Renang", "Kasur Ukuran King", "AC Hemat Energi", "TV Android", "Kulkas Mini", "Sofa Bed"],
     },
   },
+
   {
-    id: "pavilion-garden",
+    id: "standard_room",
     name: {
-      en: "The Sekar Garden Pavilion Suite",
-      id: "Sekar Garden Pavilion Suite",
+      en: "Sekar Standard Room",
+      id: "Kamar Standar Sekar",
     },
     categoryName: {
-      en: "Pavilion Suite",
-      id: "Pavilion Suite",
+      en: "Standard Room",
+      id: "Kamar Standar",
     },
     badgeName: {
-      en: "Garden Retreat",
-      id: "Peristirahatan Kebun",
+      en: "Standard",
+      id: "Standar",
     },
-    shortDescription: {
-      en: "A tranquil private bungalow detached from the main lounge, featuring traditional craft architecture with a sleek minimal touch.",
-      id: "Bungalo pribadi yang terpisah dari ruang utama, menawarkan arsitektur tradisional berbalut minimalisme modern.",
-    },
-    longDescription: {
-      en: "Perfect for lovers of nature and writing. Detached from the main residence, this pavilion is surrounded by water lilies, organic banana trees, and ginger plants. Features a private wooden porch with local handmade pottery decor, and a luxurious sky-lit rainfall shower that brings the tropical rain sentiment inside safely.",
-      id: "Cocok bagi pencinta alam dan ketenangan. Terpisah dari bangunan utama, paviliun ini dikelilingi bunga seroja, pohon pisang hias, dan tanaman jahe hutan. Memiliki teras kayu pribadi dengan dekorasi tembikar lokal Bantul, serta pancuran mandi atap kaca tembus langit.",
+    roomDescription: {
+      en: "The perfect choice for guests looking to work from anywhere (WFC) while enjoying a comfortable and effortless stay. This room features a sleek, modern minimalist design. Though compact, it is thoughtfully equipped with a high-quality Queen bed and a clean, modern bathroom.",
+      id: "Pilihan sempurna untuk tamu yang menginginkan WFC, dan pengalaman menginap yang nyaman dan mudah. Kamar yang dirancang dengan suasana minimalist dan modern. Kamar yang compact dilengkapi kasur berkualitas ukuran Queen, dengan kamar mandi yang minimalist dan modern.",
     },
     specs: {
-      size: "50 m²",
+      size: "35 m²",
       beds: {
-        en: "1 King Bed or 2 Single Beds",
-        id: "1 Ranjang King atau 2 Ranjang Single",
+        en: "1 Queen Size Bed",
+        id: "1 Kasur Ukuran Queen",
       },
-      baths: "1 Private (Glass Skylight Rainfall Bathroom)",
+      baths: {
+        en: "1 Indoor Bath",
+        id: "1 Kamar Mandi Dalam",
+      },
       capacity: {
-        en: "2 Adults",
-        id: "2 Dewasa",
+        en: "2 People (2 extra bed available)",
+        id: "2 Orang (2 Kasur tambahan tersedia)",
       },
     },
     images: SUITE_PHOTOS.pavilionSuite,
     features: {
-      en: ["Private Wooden Porch", "Detached Garden Bungalow", "Skylight Rainforest Shower", "Terracotta Accents", "Bose Bluetooth Companion", "Special Espresso Machine"],
-      id: ["Teras Kayu Pribadi", "Bungalo Kebun Terpisah", "Pancuran Atap Kaca Alami", "Aksen Seni Terakota", "Speaker Bose Companion", "Mesin Espresso Khusus"],
+      en: ["Closest Parking Access", "Queen-Size Bed", "Energy-Efficient AC", "Comfortable Workspace", "Android TV"],
+      id: ["Akses Terdekat ke Parkiran", "Kasur Ukuran Queen", "AC Hemat Energi", "TV Android", "Meja Kerja Nyaman"],
     },
   },
   {
-    id: "suite-regular",
+    id: "twin_size_room",
     name: {
       en: "The Sophia Comfort Regular Suite",
       id: "Sophia Comfort Regular Suite",
@@ -107,11 +106,7 @@ export const ROOMS: RoomDetails[] = [
       en: "Comfort Suite",
       id: "Suite Nyaman",
     },
-    shortDescription: {
-      en: "A beautifully appointed, cosy room with modern organic finishes, custom craft details, and poolside views.",
-      id: "Kamar yang didesain cantik dan nyaman dengan sentuhan akhir organik modern, detail kerajinan khas, dan pemandangan kolam renang.",
-    },
-    longDescription: {
+    roomDescription: {
       en: "Our Regular Suite offers guest comfort at its finest. Designed with high-quality local teak furniture, elegant lighting, and modern conveniences. Standard amenities include a posture-pedic queen bed, en-suite modern shower, and a beautiful sit-out patio overlooking the peaceful gardens.",
       id: "Regular Suite kami menawarkan kenyamanan terbaik bagi para tamu. Didesain menggunakan furnitur kayu jati lokal berkualitas tinggi, pencahayaan hangat yang elegan, dan fasilitas modern. Dilengkapi ranjang terapi berukuran Queen, kamar mandi shower modern en-suite, serta teras luar pribadi yang asri menghadap taman.",
     },
@@ -121,7 +116,10 @@ export const ROOMS: RoomDetails[] = [
         en: "1 Queen Bed (Comfort Latex)",
         id: "1 Ranjang Queen (Lateks Nyaman)",
       },
-      baths: "1 En-Suite (Modern Rain Shower Bathroom)",
+      baths: {
+        en: "1 Indoor Bath",
+        id: "1 Kamar Mandi Dalam",
+      },
       capacity: {
         en: "2 Adults",
         id: "2 Dewasa",
