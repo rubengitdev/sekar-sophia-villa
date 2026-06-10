@@ -37,7 +37,7 @@ export const LANGUAGES: Record<"en" | "id", TranslationSet> = {
     propertyOverviewSubtitle: "Sophisticated scale designed to frame light, breeze, and absolute comfort.",
     uspTitle: "Why Choose Sekar Sophia",
 
-    accommodationTitle: "Luxury Living Spaces",
+    accommodationTitle: "Minimalist Living Spaces",
     accommodationSubtitle: "Each corner meticulously designed to offer premium resort leisure & Javanese warmth.",
     capacityLabel: "Accommodates",
     specSize: "Est. Size",
@@ -105,7 +105,7 @@ export const LANGUAGES: Record<"en" | "id", TranslationSet> = {
     propertyOverviewSubtitle: "Tata ruang canggih yang dirancang untuk menangkap cahaya, angin sejuk, dan kenyamanan mutlak.",
     uspTitle: "Keistimewaan Sekar Sophia",
 
-    accommodationTitle: "Ruang Hunian Mewah",
+    accommodationTitle: "Ruang Hunian Minimalis",
     accommodationSubtitle: "Setiap sudut dirancang secara teliti untuk menyajikan kemudahan resor premium & kehangatan khas Jawa.",
     capacityLabel: "Kapasitas Tamu",
     specSize: "Luas Estimasi",
