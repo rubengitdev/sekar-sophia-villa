@@ -102,11 +102,6 @@ export function Accommodation({ currentLang, translations }: AccommodationProps)
                   className="h-full w-full object-cover transition-all duration-500 ease-in-out"
                   referrerPolicy="no-referrer"
                 />
-                
-                {/* Floating Suite Badge */}
-                <span className="absolute top-4 left-4 bg-[#fdfcfb]/90 border border-gold/25 text-gold text-[8px] font-mono tracking-widest uppercase py-1 px-2.5 rounded-md font-semibold backdrop-blur-xs">
-                  {activeRoom.specs.size} Exclusive Space
-                </span>
 
                 {/* Left Arrow */}
                 {activeRoom.images.length > 1 && (
