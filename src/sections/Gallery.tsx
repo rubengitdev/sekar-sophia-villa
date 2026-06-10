@@ -65,7 +65,7 @@ export function Gallery({ currentLang, translations }: GalleryProps) {
               {translations.navGallery}
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-900 mt-2 leading-tight">
-              {currentLang === "en" ? "Aesthetic Photographic Journey" : "Galeri Sinematik Estetis"}
+              {currentLang === "en" ? "Sekar Sophia Villa Aesthetic" : "Estetika Sekar Sophia Villa"}
             </h2>
           </div>
           <div className="font-sans text-xs sm:text-sm text-stone-500 font-light max-w-xs shrink-0 self-start md:self-end">
