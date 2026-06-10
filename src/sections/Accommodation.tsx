@@ -60,7 +60,7 @@ export function Accommodation({ currentLang, translations }: AccommodationProps)
         {/* Section Header */}
         <div className="text-center mb-12 max-w-2xl mx-auto">
           <span className="font-mono text-xs tracking-[0.2em] text-gold uppercase font-semibold">
-            {currentLang === "en" ? "Private Living Spaces" : "Ruang Hunian Privat"}
+            {currentLang === "en" ? "Private Co-Living Spaces" : "Ruang Hunian Privat Bersama"}
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-900 mt-2 leading-tight">
             {translations.accommodationTitle}
