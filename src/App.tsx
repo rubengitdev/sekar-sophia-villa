@@ -162,7 +162,7 @@ export default function App() {
           <div className="flex flex-col sm:flex-row items-center justify-between pt-6 text-[9px] font-mono text-stone-450 tracking-wider">
             <span>© 2026 SEKARSOPHIAVILLA. ALL RIGHTS RESERVED.</span>
             <div className="flex items-center space-x-2 mt-3 sm:mt-0 uppercase text-stone-500 font-bold">
-              <span>Managed by Sophia</span>
+              <span>Managed by Sekar Sophia</span>
               <span>•</span>
               <span className="text-gold">Kasongan, Bantul</span>
             </div>
