@@ -14,13 +14,13 @@ import { SUITE_PHOTOS } from "./photos";
  */
 export const ROOMS: RoomDetails[] = [
   {
-    id: "deluxe_room",
+    id: "deluxe_suite",
     name: {
       en: "Sekar Exclusive Deluxe Room",
       id: "Kamar Deluxe Eksklusif Sekar",
     },
     categoryName: {
-      en: "Deluxe Room",
+      en: "Deluxe Suite",
       id: "Kamar Deluxe",
     },
     badgeName: {
@@ -54,13 +54,13 @@ export const ROOMS: RoomDetails[] = [
   },
 
   {
-    id: "standard_room",
+    id: "standard_suite",
     name: {
       en: "Sekar Standard Room",
       id: "Kamar Standar Sekar",
     },
     categoryName: {
-      en: "Standard Room",
+      en: "Standard Suite",
       id: "Kamar Standar",
     },
     badgeName: {
@@ -93,14 +93,53 @@ export const ROOMS: RoomDetails[] = [
     },
   },
   {
-    id: "twin_size_room",
+    id: "twin_bed_room",
     name: {
       en: "The Sophia Comfort Regular Suite",
       id: "Sophia Comfort Regular Suite",
     },
     categoryName: {
-      en: "Regular Suite",
-      id: "Regular Suite",
+      en: "Twin Bed Suite",
+      id: "Kamar Twin Bed",
+    },
+    badgeName: {
+      en: "Comfort Suite",
+      id: "Suite Nyaman",
+    },
+    roomDescription: {
+      en: "Our Regular Suite offers guest comfort at its finest. Designed with high-quality local teak furniture, elegant lighting, and modern conveniences. Standard amenities include a posture-pedic queen bed, en-suite modern shower, and a beautiful sit-out patio overlooking the peaceful gardens.",
+      id: "Regular Suite kami menawarkan kenyamanan terbaik bagi para tamu. Didesain menggunakan furnitur kayu jati lokal berkualitas tinggi, pencahayaan hangat yang elegan, dan fasilitas modern. Dilengkapi ranjang terapi berukuran Queen, kamar mandi shower modern en-suite, serta teras luar pribadi yang asri menghadap taman.",
+    },
+    specs: {
+      size: "38 m²",
+      beds: {
+        en: "1 Queen Bed (Comfort Latex)",
+        id: "1 Ranjang Queen (Lateks Nyaman)",
+      },
+      baths: {
+        en: "1 Indoor Bath",
+        id: "1 Kamar Mandi Dalam",
+      },
+      capacity: {
+        en: "2 Adults",
+        id: "2 Dewasa",
+      },
+    },
+    images: SUITE_PHOTOS.regularSuite,
+    features: {
+      en: ["Pool Side View", "Comfort Queen Bed", "Modern Rain Shower", "Sleek Workspace Desk", "Smart Flat TV", "Premium Soft Linens"],
+      id: ["Pemandangan Sisi Kolam", "Kasur Queen Terapeutik", "Pancuran Shower Modern", "Meja Kerja Minimalis", "Smart TV Interaktif", "Sprei Katun Lembut"],
+    },
+  },
+  {
+    id: "superior_room",
+    name: {
+      en: "The Sophia Comfort Regular Suite",
+      id: "Sophia Comfort Regular Suite",
+    },
+    categoryName: {
+      en: "Superior Suite",
+      id: "Kamar Superior",
     },
     badgeName: {
       en: "Comfort Suite",

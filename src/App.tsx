@@ -143,16 +143,16 @@ export default function App() {
               </span>
               <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-stone-500 text-[11px] font-medium">
                 <button onClick={() => handleFooterLinkClick("about")} className="hover:text-gold cursor-pointer">
-                  {currentLang === "en" ? "Story" : "Kisah Kami"}
+                  {currentLang === "en" ? "About" : "Kisah Kami"}
                 </button>
                 <button onClick={() => handleFooterLinkClick("roomandfacility")} className="hover:text-gold cursor-pointer">
-                  {currentLang === "en" ? "The Spaces" : "Kamar & Fasilitas"}
+                  {currentLang === "en" ? "Room & Facility" : "Kamar & Fasilitas"}
                 </button>
                 <button onClick={() => handleFooterLinkClick("discover")} className="hover:text-gold cursor-pointer">
                   {currentLang === "en" ? "Discover" : "Galeri & Wisata"}
                 </button>
                 <button onClick={() => handleFooterLinkClick("reserve")} className="hover:text-gold cursor-pointer">
-                  {currentLang === "en" ? "Reserve Now" : "Pemesanan"}
+                  {currentLang === "en" ? "Reserve" : "Pemesanan"}
                 </button>
               </div>
             </div>
