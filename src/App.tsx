@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { AboutPage } from "./pages/AboutPage";
 import { RoomAndFacilityPage } from "./pages/RoomAndFacilityPage";
-import { DiscoverPage } from "./pages/DiscoverPage";  
+import { GalleryPage } from "./pages/GalleryPage";  
 import { ReservePage } from "./pages/ReservePage";
 import { LANGUAGES, VILLA_CONFIG } from "./data/villaData";
 import { LanguageCode } from "./types";
@@ -28,7 +28,7 @@ export default function App() {
   // Localization storage - standard codes supported: "en" | "id" 
   const [currentLang, setCurrentLang] = useState<LanguageCode>("en");
   
-  // Tab/Chapter router state - supports: "about" | "roomandfacility" | "discover" | "reserve"
+  // Tab/Chapter router state - supports: "about" | "roomandfacility" | "gallery" | "reserve"
   const [activeTab, setActiveTab] = useState<string>("about");
 
   // Retrieve matching multilingual dictionaries based on active selection
@@ -92,8 +92,8 @@ export default function App() {
               <RoomAndFacilityPage currentLang={currentLang} translations={translations} />
             )}
 
-            {activeTab === "discover" && (
-              <DiscoverPage currentLang={currentLang} translations={translations} />
+            {activeTab === "gallery" && (
+              <GalleryPage currentLang={currentLang} translations={translations} />
             )}
 
             {activeTab === "reserve" && (
@@ -148,8 +148,8 @@ export default function App() {
                 <button onClick={() => handleFooterLinkClick("roomandfacility")} className="hover:text-gold cursor-pointer">
                   {currentLang === "en" ? "Room & Facility" : "Kamar & Fasilitas"}
                 </button>
-                <button onClick={() => handleFooterLinkClick("discover")} className="hover:text-gold cursor-pointer">
-                  {currentLang === "en" ? "Discover" : "Galeri & Wisata"}
+                <button onClick={() => handleFooterLinkClick("gallery")} className="hover:text-gold cursor-pointer">
+                  {currentLang === "en" ? "Gallery" : "Galeri"}
                 </button>
                 <button onClick={() => handleFooterLinkClick("reserve")} className="hover:text-gold cursor-pointer">
                   {currentLang === "en" ? "Reserve" : "Pemesanan"}

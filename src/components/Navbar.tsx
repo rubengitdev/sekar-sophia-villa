@@ -82,7 +82,7 @@ export function Navbar({ currentLang, onLanguageChange, translations, activeTab,
   const navItems = [
     { label: currentLang === "en" ? "About" : "Kisah Kami", id: "about" },
     { label: currentLang === "en" ? "Room & Facility" : "Kamar & Fasilitas", id: "roomandfacility" },
-    { label: currentLang === "en" ? "Discover" : "Galeri & Wisata", id: "discover" },
+    { label: currentLang === "en" ? "Gallery" : "Galeri", id: "gallery" },
     { label: currentLang === "en" ? "Reserve" : "Pemesanan", id: "reserve" },
   ];
 
