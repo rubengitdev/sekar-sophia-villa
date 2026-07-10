@@ -4,7 +4,16 @@
  */
 
 import React from "react";
-import { Tv, Flame, Wifi, Sparkles, Sun, Wind, Car, Coffee } from "lucide-react";
+import {
+  Tv,
+  Flame,
+  Wifi,
+  Sparkles,
+  Sun,
+  Wind,
+  Car,
+  Coffee,
+} from "lucide-react";
 import { AMENITIES } from "../data/villaData";
 import { LanguageCode, TranslationSet } from "../types";
 
@@ -29,7 +38,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 /**
  * Facilities Component
- * 
+ *
  * Renders a structured layout showcasing standard and bespoke high-end villa amenities.
  * Pillars:
  * 1. Curated Amenities Header: High-contrast title focusing on the peaceful nature of Bantul.
@@ -38,9 +47,11 @@ const iconMap: Record<string, React.ReactNode> = {
  */
 export function Facilities({ currentLang, translations }: FacilitiesProps) {
   return (
-    <section id="facilities" className="bg-[#fdfcfb] py-16 px-6 md:px-12 text-stone-900 border-t border-stone-200/40">
+    <section
+      id="facilities"
+      className="bg-[#fdfcfb] py-16 px-6 md:px-12 text-stone-900 border-t border-stone-200/40"
+    >
       <div className="mx-auto max-w-7xl">
-        
         {/* Section Header */}
         <div className="text-center mb-12 max-w-2xl mx-auto">
           <span className="font-mono text-xs tracking-[0.2em] text-gold uppercase font-semibold">
@@ -63,7 +74,9 @@ export function Facilities({ currentLang, translations }: FacilitiesProps) {
               className="group bg-white border border-stone-200/60 hover:border-gold/30 rounded-xl p-5 shadow-2xs hover:shadow-sm transition-all duration-355"
             >
               <div className="p-3 bg-stone-100 group-hover:bg-gold/10 inline-block rounded-lg mb-4 transition-colors duration-300">
-                {iconMap[amenity.icon] || <Sparkles className="h-6 w-6 text-gold" />}
+                {iconMap[amenity.icon] || (
+                  <Sparkles className="h-6 w-6 text-gold" />
+                )}
               </div>
               <h4 className="font-serif text-base sm:text-lg font-bold text-stone-900 tracking-tight mb-1.5">
                 {amenity.name[currentLang]}
@@ -75,15 +88,14 @@ export function Facilities({ currentLang, translations }: FacilitiesProps) {
           ))}
         </div>
 
-        {/* Comfort assurance notice */}
+        {/* Comfort assurance notice
         <div className="mt-14 bg-stone-100/50 border border-stone-200/50 rounded-xl p-6 max-w-2xl mx-auto text-center font-sans">
           <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
             {currentLang === "en"
               ? "All listed facilities are fully private and exclusive to your group. Sophia manages direct villa upkeep daily to guarantee no shared bookings or overlap interruptions."
               : "Seluruh fasilitas terdaftar sepenuhnya privat bagi kunjungan Anda. Sophia menjamin kepuasan ekstra tanpa risiko gangguan tamu luar."}
           </p>
-        </div>
-
+        </div> */}
       </div>
     </section>
   );
