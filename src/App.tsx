@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router';
 import { Navbar } from './components/Navbar';
 import { AboutPage } from './pages/AboutPage';
 import { RoomAndFacilityPage } from './pages/RoomAndFacilityPage';
@@ -9,25 +10,14 @@ import { LanguageCode } from './types';
 import { ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-/**
- * App Root Controller Component
- *
- * Functions as the central hub of the web application.
- * Highlights:
- * 1. Global Localization Store: Controls direct bilingual mapping ('en' <-> 'id') dynamically consumed across all child pages.
- * 2. Seamless Chapter Router: Manages tabs states synchronously, feeding back into the Sticky Header.
- * 3. Liquid Page Transitions: Wraps sections in Framer Motion wrappers, keeping DOM mounting fluid and clean.
- * 4. Unified Theme Canvas: Paints backing elements using soft creamy tones and custom luxury typography overlays.
- */
 export default function App() {
-    // Localization storage - standard codes supported: "en" | "id"
     const [currentLang, setCurrentLang] = useState<LanguageCode>('en');
-
-    // Tab/Chapter router state - supports: "about" | "roomandfacility" | "gallery" | "reserve"
-    const [activeTab, setActiveTab] = useState<string>('about');
-
-    // Retrieve matching multilingual dictionaries based on active selection
     const translations = LANGUAGES[currentLang];
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const activeTab =
+        location.pathname === '/' ? 'about' : location.pathname.slice(1);
 
     /**
      * Smooth Scrolling Facilitator
@@ -45,7 +35,7 @@ export default function App() {
      * Performs dual action updates: changes active tab context and targets coordinates to top index on transition.
      */
     const handleFooterLinkClick = (tabId: string) => {
-        setActiveTab(tabId);
+        navigate(tabId === 'about' ? '/' : `/${tabId}`);
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
@@ -62,8 +52,6 @@ export default function App() {
                 currentLang={currentLang}
                 onLanguageChange={(lang) => setCurrentLang(lang)}
                 translations={translations}
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
             />
 
             {/* Main Structural Layout Modules - Grouped beautifully into 4 cohesive views */}

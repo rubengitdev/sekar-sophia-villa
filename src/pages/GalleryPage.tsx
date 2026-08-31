@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React from 'react';
 import { Gallery } from '../components/sections/Gallery';
 import { LocalAttraction } from '../components/sections/LocalAttraction';

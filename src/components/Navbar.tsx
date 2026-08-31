@@ -3,18 +3,12 @@ import { Menu, X, Globe, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { LanguageCode, TranslationSet } from '../types';
 import sekarLogo from '../data/photos/sekar_logo.png';
+import { useLocation, useNavigate } from 'react-router';
 
 interface NavbarProps {
-    /** Active language selection indicator */
     currentLang: LanguageCode;
-    /** Callback triggered when a visitor toggles languages */
     onLanguageChange: (lang: LanguageCode) => void;
-    /** Localized text mappings containing active translations */
     translations: TranslationSet;
-    /** Unique active page identifier (e.g., 'about' | 'roomandfacility') */
-    activeTab: string;
-    /** Sets active page identifier and updates router state programmatically */
-    setActiveTab: (tab: string) => void;
 }
 
 /**
@@ -33,17 +27,16 @@ export function Navbar({
     currentLang,
     onLanguageChange,
     translations,
-    activeTab,
-    setActiveTab,
 }: NavbarProps) {
-    // Flag indicating if user scrolled past a basic threshold (e.g. 20px) to apply dense backdrops
     const [isScrolled, setIsScrolled] = useState(false);
-    // Controls slide-down container visibility
     const [isVisible, setIsVisible] = useState(true);
-    // Controls full-screen mobile menu drawer trigger
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    // Tracks scroll coordinate across scroll events
     const lastScrollYRef = useRef(0);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const activeTab =
+        location.pathname === '/' ? 'about' : location.pathname.slice(1);
 
     useEffect(() => {
         /**
@@ -99,7 +92,7 @@ export function Navbar({
      * Performs tab alterations, halts mobile drawer overlays, and shifts viewport smoothly.
      */
     const handleItemClick = (id: string) => {
-        setActiveTab(id);
+        navigate(id === 'about' ? '/' : `/${id}`);
         setIsMobileMenuOpen(false);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
