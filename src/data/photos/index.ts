@@ -1,10 +1,3 @@
-/**
- * Centralized Photo Assets Dictionary
- *
- * Use this file to manually edit, replace, or add photo URLs and avatar image assets in the future.
- * This represents a dedicated folder and config for all visual components of the villa web app.
- */
-
 /** Image resources for the main landing page Hero banner */
 export const HERO_PHOTOS = {
     // Main background image for the Hero banner
