@@ -101,14 +101,14 @@ export function Navbar({
         <>
             <nav
                 id="navbar-container"
-                className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 transform px-6 md:px-12 ${
+                className={`fixed top-0 left-0 z-50 w-full transition-all px-6 md:px-12 ${
                     isVisible || isMobileMenuOpen
                         ? 'translate-y-0'
                         : '-translate-y-full'
                 } ${
                     isScrolled
-                        ? 'bg-white/85 py-3 text-stone-900 shadow-sm border-b border-stone-200/50 backdrop-blur-md'
-                        : 'bg-cream/70 py-4 text-stone-900 border-b border-stone-200/25 backdrop-blur-sm'
+                        ? 'bg-white/85 py-3 text-stone-900 backdrop-blur-md'
+                        : 'bg-cream/70 py-4 text-stone-900 backdrop-blur-sm'
                 }`}
             >
                 <div className="mx-auto flex max-w-7xl items-center justify-between">
