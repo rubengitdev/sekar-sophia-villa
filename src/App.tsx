@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
-import { Navbar } from './components/Navbar';
+import { Navbar } from './components/layout/Navbar';
 import { AboutPage } from './pages/AboutPage';
 import { RoomAndFacilityPage } from './pages/RoomAndFacilityPage';
 import { GalleryPage } from './pages/GalleryPage';

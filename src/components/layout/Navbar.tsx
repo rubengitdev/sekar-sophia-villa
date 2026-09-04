@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Globe, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { LanguageCode, TranslationSet } from '../types';
-import sekarLogo from '../data/photos/sekar_logo.png';
+import { LanguageCode, TranslationSet } from '../../types.ts';
+import sekarLogo from '../../data/photos/sekarLogo.png';
 import { useLocation, useNavigate } from 'react-router';
 
 interface NavbarProps {
@@ -11,18 +11,6 @@ interface NavbarProps {
     translations: TranslationSet;
 }
 
-/**
- * Navbar Component (Bilingual Sticky Floating Header)
- *
- * Provides responsive navigational controls at the top of the browser page.
- * Key Pillars:
- * 1. Scroll-Direction Watcher: Uses a micro-debounce delta (10px threshold) to hide the bar when
- *    scrolling down and reveal it instantly when scrolling up, preserving screen real estate.
- * 2. Background Blur Blending: Swaps background density and adds borders dynamically based on scroll offset triggers.
- * 3. Fluid Underline Tracker: Employs Framer Motion layout animations to transition underlines smoothly
- *    across navigation items.
- * 4. Bilingual Switch Controls: Coordinates English and Indonesian dictionaries reactively.
- */
 export function Navbar({
     currentLang,
     onLanguageChange,
