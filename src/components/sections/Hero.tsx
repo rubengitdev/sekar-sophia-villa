@@ -6,26 +6,12 @@ import { HERO_PHOTOS } from '../../data/photos/index';
 import { getDirectImageUrl } from '../../utils/imageUtils';
 
 interface HeroProps {
-    /** User language context */
     currentLang: LanguageCode;
-    /** Active visual translations dictionary mapping */
     translations: TranslationSet;
-    /** Callback triggered to jump down into suites and spaces explorer */
     onExploreClick: () => void;
-    /** Callback triggered to jump down into direct rate calculator */
     onBookClick: () => void;
 }
 
-/**
- * Hero Component (Hero Header Billboard)
- *
- * Renders the primary landing stage of the villa platform.
- * Features:
- * 1. High-Resolution Sunlit Background: Immersive sunset pool view utilizing lazy Google Drive proxies.
- * 2. Frosted Crystal UI Panel: Framed glass mockup (`backdrop-blur-xl bg-white/45`) protecting light-contrast text content.
- * 3. Entrance Slide Animations: Staggered entry motions running on hardware-accelerated vectors.
- * 4. Premium Hotel Metadata: Displays quick bullet statistics tracking review ratings (Superhost 4.9+) and private status.
- */
 export function Hero({
     currentLang,
     translations,
