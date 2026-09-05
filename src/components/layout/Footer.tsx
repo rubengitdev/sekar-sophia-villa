@@ -27,26 +27,6 @@ export function Footer({ currentLang, onLinkClick }: FooterProps) {
                         </p>
                     </div>
 
-                    {/* Inquiries / Direct Line Column */}
-                    <div className="space-y-3 font-sans text-xs">
-                        <span className="block text-[9px] font-mono uppercase text-stone-450 tracking-widest font-bold">
-                            {currentLang === 'en'
-                                ? 'Reservations'
-                                : 'Reservasi Resmi'}
-                        </span>
-                        <p className="text-stone-600 font-light">
-                            sekarsophiavilla@gmail.com
-                        </p>
-                        <a
-                            href={`https://wa.me/${VILLA_CONFIG.contact.phone}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gold font-bold hover:underline block mt-1"
-                        >
-                            +62 812-3456-7890 (Sophia Direct)
-                        </a>
-                    </div>
-
                     {/* Links and Policies */}
                     <div className="space-y-3 text-xs">
                         <span className="block text-[9px] font-mono uppercase text-stone-450 tracking-widest font-bold">
@@ -54,7 +34,7 @@ export function Footer({ currentLang, onLinkClick }: FooterProps) {
                                 ? 'Quick Chapters'
                                 : 'Halaman Utama'}
                         </span>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-stone-500 text-[11px] font-medium">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-3 text-stone-500 text-[11px] font-medium">
                             <button
                                 onClick={() => onLinkClick('about')}
                                 className="hover:text-gold cursor-pointer"
@@ -82,6 +62,26 @@ export function Footer({ currentLang, onLinkClick }: FooterProps) {
                                 {currentLang === 'en' ? 'Reserve' : 'Pemesanan'}
                             </button>
                         </div>
+                    </div>
+
+                    {/* Inquiries / Direct Line Column */}
+                    <div className="space-y-3 font-sans text-xs">
+                        <span className="block text-[9px] font-mono uppercase text-stone-450 tracking-widest font-bold">
+                            {currentLang === 'en'
+                                ? 'Reservations'
+                                : 'Reservasi Resmi'}
+                        </span>
+                        <p className="text-stone-600 font-light">
+                            sekarsophiavilla@gmail.com
+                        </p>
+                        <a
+                            href={`https://wa.me/${VILLA_CONFIG.contact.phone}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gold font-bold hover:underline block mt-1"
+                        >
+                            +62 812-3456-7890 (Sophia Direct)
+                        </a>
                     </div>
                 </div>
 
