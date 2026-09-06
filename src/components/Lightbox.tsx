@@ -133,7 +133,6 @@ export function Lightbox({
                         exit={{ opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.3, ease: 'easeOut' }}
                         src={getDirectImageUrl(currentItem.url)}
-                        alt={currentItem.caption[currentLang]}
                         className="max-h-[70vh] max-w-full object-contain rounded shadow-2xl border border-stone-800/40"
                         referrerPolicy="no-referrer"
                     />
@@ -157,9 +156,6 @@ export function Lightbox({
                     className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 via-stone-950/70 to-transparent pt-12 pb-6 px-6 md:px-12 text-center"
                 >
                     <div className="max-w-2xl mx-auto">
-                        <p className="font-serif text-sm md:text-base text-stone-200 tracking-wide leading-relaxed">
-                            {currentItem.caption[currentLang]}
-                        </p>
                         <div className="flex justify-center items-center space-x-2 mt-3 text-[10px] font-mono text-stone-500 uppercase tracking-widest">
                             <span>Sekar Sophia Villa Experience</span>
                             <span>•</span>
