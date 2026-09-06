@@ -13,22 +13,10 @@ import { LanguageCode, TranslationSet } from '../../types';
 import { getDirectImageUrl } from '../../utils/imageUtils';
 
 interface AccommodationProps {
-    /** User visual language state */
     currentLang: LanguageCode;
-    /** Primary localization texts mapping */
     translations: TranslationSet;
 }
 
-/**
- * Accommodation Component
- *
- * Manages the dynamic showcase of the villa's physical rooms and suites.
- * Features:
- * 1. Horizontal Switch Tabs: Sliding tab buttons mapping individual room data models (e.g. Temple Suite, Master Suite).
- * 2. Visual Carousels: Image slide controller mapping nested photos with forward/fallback loop indices.
- * 3. Perspectives strip: A thumbnail gallery strip linked directly with the parent carousel viewport.
- * 4. Architectural Specs Module: Dynamic grids mapping size, bed setups, bath amenities, and visitor limits.
- */
 export function Accommodation({
     currentLang,
     translations,
