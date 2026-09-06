@@ -123,7 +123,6 @@ export interface GalleryItem {
     id: string;
     url: string;
     category: 'exterior' | 'interior' | 'pool' | 'surroundings';
-    caption: Record<LanguageCode, string>;
 }
 
 /** Seasonal rate configurations referenced in pricing cards and booking algorithms */
