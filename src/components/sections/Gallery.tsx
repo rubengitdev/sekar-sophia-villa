@@ -6,24 +6,13 @@ import { LanguageCode, TranslationSet } from '../../types';
 import { getDirectImageUrl } from '../../utils/imageUtils';
 
 interface GalleryProps {
-    /** Master user language selection code */
     currentLang: LanguageCode;
-    /** Translation dictionaries */
     translations: TranslationSet;
 }
 
 // Allowed category filter tags
 type FilterCategory = 'all' | 'exterior' | 'interior' | 'pool' | 'surroundings';
 
-/**
- * Gallery Component
- *
- * Provides an aesthetic, filterable visual showcase of the villa's architecture and grounds.
- * Key Pillars:
- * 1. Cinematic Filter Tabs: Category selectors running on responsive toggle chips.
- * 2. Visual Hover Grid: Staggered tiles with smooth overlays, custom tags, and zoom modifiers.
- * 3. Maximize Spotlight overlays: Links individual thumbnail click events with full-viewport Lightbox states.
- */
 export function Gallery({ currentLang, translations }: GalleryProps) {
     // Currently active filter tag default: 'all'
     const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
@@ -55,6 +44,12 @@ export function Gallery({ currentLang, translations }: GalleryProps) {
             value: 'surroundings',
         },
     ];
+
+    const visibleCategories = categories.filter(
+        (category) =>
+            category.value === 'all' ||
+            GALLERY_ITEMS.some((item) => item.category === category.value),
+    );
 
     /** Updates index to open lightboxes dynamically */
     const handleOpenLightbox = (itemIndex: number) => {
@@ -88,7 +83,7 @@ export function Gallery({ currentLang, translations }: GalleryProps) {
 
                 {/* Categories Tab Selector */}
                 <div className="flex flex-wrap gap-2 mb-10 border-b border-stone-200/50 pb-4 justify-start">
-                    {categories.map((cat) => (
+                    {visibleCategories.map((cat) => (
                         <button
                             id={`filter-btn-${cat.value}`}
                             key={cat.value}
@@ -115,7 +110,7 @@ export function Gallery({ currentLang, translations }: GalleryProps) {
                         >
                             <img
                                 src={getDirectImageUrl(item.url)}
-                                alt={item.caption[currentLang]}
+                                alt="Sekar Sophia Image"
                                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
                                 referrerPolicy="no-referrer"
                             />
@@ -130,9 +125,6 @@ export function Gallery({ currentLang, translations }: GalleryProps) {
                                 <span className="bg-gold text-[8px] font-mono tracking-widest uppercase font-bold px-2 py-0.5 rounded text-white inline-block mb-1.5">
                                     {item.category}
                                 </span>
-                                <p className="font-serif text-xs text-stone-100 font-medium line-clamp-1">
-                                    {item.caption[currentLang]}
-                                </p>
                             </div>
                         </div>
                     ))}
