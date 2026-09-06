@@ -1,13 +1,55 @@
 import { RoomDetails } from '../types';
-import { SUITE_PHOTOS } from './photos';
 
-/**
- * Suites and Rooms Collection Dataset (ROOMS)
- *
- * Houses room details for Temple Suite, Garden Pavilion, and Comfort Regular Suite.
- * Establishes specifications detailing sizes, bed capacities, bathroom options, and inclusions.
- */
+// Sorting photos
+function getSortedPhotoUrls(photoFiles: Record<string, unknown>): string[] {
+    const filePaths = Object.keys(photoFiles);
+    filePaths.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    const sortedUrls = filePaths.map((path) => photoFiles[path] as string);
+    return sortedUrls;
+}
+
+// Deluxe Suite Photos
+// Find Every photo inside deluxe room folder
+const deluxePhotoFiles = import.meta.glob('./photos/rooms/deluxe/*.webp', {
+    eager: true,
+    import: 'default',
+});
+
+// Get final sorted list of deluxe room photo Urls
+const deluxeImages = getSortedPhotoUrls(deluxePhotoFiles);
+
+// Standard Suite Photos
+// Find Every photo inside standard room folder
+const standardPhotoFiles = import.meta.glob('./photos/rooms/standard/*.webp', {
+    eager: true,
+    import: 'default',
+});
+
+// Get final sorted list of deluxe room photo Urls
+const standardImages = getSortedPhotoUrls(standardPhotoFiles);
+
+// twinbed Suite Photos
+// Find Every photo inside twinbed room folder
+const twinbedPhotoFiles = import.meta.glob('./photos/rooms/twinbed/*.webp', {
+    eager: true,
+    import: 'default',
+});
+
+// Get final sorted list of deluxe room photo Urls
+const twinbedImages = getSortedPhotoUrls(twinbedPhotoFiles);
+
+// Superior Suite Photos
+// Find Every photo inside superior room folder
+const superiorPhotoFiles = import.meta.glob('./photos/rooms/superior/*.webp', {
+    eager: true,
+    import: 'default',
+});
+
+// Get final sorted list of deluxe room photo Urls
+const superiorImages = getSortedPhotoUrls(superiorPhotoFiles);
+
 export const ROOMS: RoomDetails[] = [
+    // Deluxe Suite
     {
         id: 'deluxe_suite',
         name: {
@@ -41,7 +83,7 @@ export const ROOMS: RoomDetails[] = [
                 id: '2 Orang (2 Kasur tambahan tersedia)',
             },
         },
-        images: SUITE_PHOTOS.templeSuite,
+        images: deluxeImages,
         features: {
             en: [
                 'Closest Pool Access',
@@ -62,6 +104,7 @@ export const ROOMS: RoomDetails[] = [
         },
     },
 
+    // Standard Suite
     {
         id: 'standard_suite',
         name: {
@@ -95,7 +138,7 @@ export const ROOMS: RoomDetails[] = [
                 id: '2 Orang (2 Kasur tambahan tersedia)',
             },
         },
-        images: SUITE_PHOTOS.pavilionSuite,
+        images: standardImages,
         features: {
             en: [
                 'Closest Parking Access',
@@ -113,6 +156,8 @@ export const ROOMS: RoomDetails[] = [
             ],
         },
     },
+
+    // Twin Bed Suite
     {
         id: 'twin_bed_room',
         name: {
@@ -146,7 +191,7 @@ export const ROOMS: RoomDetails[] = [
                 id: '2 Dewasa',
             },
         },
-        images: SUITE_PHOTOS.regularSuite,
+        images: twinbedImages,
         features: {
             en: [
                 'Pool Side View',
@@ -166,6 +211,8 @@ export const ROOMS: RoomDetails[] = [
             ],
         },
     },
+
+    // Superior Suite
     {
         id: 'superior_room',
         name: {
@@ -199,7 +246,7 @@ export const ROOMS: RoomDetails[] = [
                 id: '2 Dewasa',
             },
         },
-        images: SUITE_PHOTOS.regularSuite,
+        images: superiorImages,
         features: {
             en: [
                 'Pool Side View',
