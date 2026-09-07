@@ -12,15 +12,6 @@ interface StoryPageProps {
     onBookClick: () => void;
 }
 
-/**
- * StoryPage Component (Chapter 1: Story)
- *
- * Serves as the main entrance page of the villa application. It bundles two critical areas:
- * 1. Hero Section: Direct high-contrast Javanese wood backdrop displaying hospitality statistics
- *    and primary visual calls-to-action (CTAs).
- * 2. About Section: Chronological overview of Sophia's artistic vision, property outline,
- *    Bantul clay artisans, and structural parameters accompanied by organic imagery.
- */
 export function AboutPage({
     currentLang,
     translations,
