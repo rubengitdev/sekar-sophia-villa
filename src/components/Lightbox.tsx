@@ -17,15 +17,6 @@ interface LightboxProps {
     currentLang: LanguageCode;
 }
 
-/**
- * Lightbox Component
- *
- * Cinematic, immersive media container that takes over the entire browser viewport on photo click.
- * Key Pillars:
- * 1. Global Keyboard Listeners: Installs global window listeners mapping Escape, ArrowLeft, and ArrowRight keys.
- * 2. Body Scroll Suspension: Freezes overflow layout attributes of the host body layer during overlay mounting.
- * 3. Fluid Animated Carousel: Uses Framer Motion's hardware-accelerated entry configurations.
- */
 export function Lightbox({
     items,
     currentIndex,

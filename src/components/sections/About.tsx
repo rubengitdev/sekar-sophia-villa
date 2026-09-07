@@ -6,9 +6,7 @@ import { ABOUT_PHOTOS } from '../../data/photos';
 import { getDirectImageUrl } from '../../utils/imageUtils';
 
 interface AboutProps {
-    /** Language switcher state */
     currentLang: LanguageCode;
-    /** Active translations dictionary mapping */
     translations: TranslationSet;
 }
 
@@ -19,17 +17,6 @@ const iconMap: Record<string, React.ReactNode> = {
     Heart: <Heart className="h-6 w-6 text-gold" />,
 };
 
-/**
- * About Component
- *
- * Provides an editorial narrative explaining the heritage story of Sekar Sophia.
- * Key Sections:
- * 1. Visual Section Header: Gold-bordered displayed headline anchoring Javanese-Modern branding.
- * 2. Narrative Prose: Tells Sophia's founding goals, Kasongan arts, and wood construction.
- * 3. Numerical Statistics Bar: Metric summaries tracking construction year, land size, and design archetype.
- * 4. Kiln Pottery Badge: Overlay noting proximity to Bantul craftsmen.
- * 5. Unique Value Cards (USP): Horizontal blocks showing physical perks.
- */
 export function About({ currentLang, translations }: AboutProps) {
     return (
         <section

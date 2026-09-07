@@ -13,9 +13,7 @@ import { AMENITIES } from '../../data/villaData';
 import { LanguageCode, TranslationSet } from '../../types';
 
 interface FacilitiesProps {
-    /** Master user language state */
     currentLang: LanguageCode;
-    /** Active language translation sets */
     translations: TranslationSet;
 }
 
@@ -31,15 +29,6 @@ const iconMap: Record<string, React.ReactNode> = {
     Coffee: <Coffee className="h-6 w-6 text-gold" />,
 };
 
-/**
- * Facilities Component
- *
- * Renders a structured layout showcasing standard and bespoke high-end villa amenities.
- * Pillars:
- * 1. Curated Amenities Header: High-contrast title focusing on the peaceful nature of Bantul.
- * 2. Visual Bento Modules: Maps AMENITIES data into clean cards styled with custom shadows and active gold border glows.
- * 3. Exclusive Use Assurance Block: A centralized footnote assuring visitors that no shared bookings can disrupt their stay.
- */
 export function Facilities({ currentLang, translations }: FacilitiesProps) {
     return (
         <section

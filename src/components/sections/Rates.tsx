@@ -1,26 +1,13 @@
-import React from 'react';
 import { CalendarCheck, ShieldCheck, Clock } from 'lucide-react';
 import { VILLA_CONFIG } from '../../data/villaData';
 import { BookingWidget } from '../../components/BookingWidget';
 import { LanguageCode, TranslationSet } from '../../types';
 
 interface RatesProps {
-    /** Active user dictionary selection code string */
     currentLang: LanguageCode;
-    /** Direct translations mapping nodes */
     translations: TranslationSet;
 }
 
-/**
- * Rates Component (Rates Sheet and General Pricing Page)
- *
- * Embeds direct pricing panels next to the main interactive BookingWidget.
- * Key Sections:
- * 1. Base Rate Display: Highlights standard nightly baseline rates using localized currencies.
- * 2. Seasonal Calendars list: Tabular list showcasing dates, periods, and pricing for high-season events.
- * 3. House Rules and Timings Block: Highlights official Check-In/Check-Out guidelines and custom accommodation rules.
- * 4. Live Booking Widget Panel: Houses the main date calculation engine.
- */
 export function Rates({ currentLang, translations }: RatesProps) {
     /**
      * Currency Formatter

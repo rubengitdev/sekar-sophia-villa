@@ -1,9 +1,4 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Car, MapPin } from 'lucide-react';
 import { ATTRACTIONS } from '../../data/villaData';
 import { LanguageCode, TranslationSet } from '../../types';
@@ -16,18 +11,6 @@ interface LocalAttractionProps {
 
 type CategoryFilter = 'all' | 'beach' | 'restaurant' | 'culture';
 
-/**
- * LocalAttraction Component
- *
- * Renders a visually aesthetic guide showcasing points of interest around Yogyakarta,
- * Bantul, and Parangtritis beaches. Guests can discover handpainted pottery villages,
- * local organic eateries and seaside areas.
- *
- * Pillars:
- * 1. Filter Chips: Reactive category toggles updating the layout layout instantly.
- * 2. Visual Cards: Grid layout listing images and multilingual descriptions.
- * 3. Distance Pill metrics: Uses 'lucide-react' vehicle icons paired with custom km measurements.
- */
 export function LocalAttraction({
     currentLang,
     translations,

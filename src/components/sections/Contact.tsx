@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Mail,
     Phone,
@@ -13,22 +12,10 @@ import { VILLA_CONFIG } from '../../data/villaData';
 import { LanguageCode, TranslationSet } from '../../types';
 
 interface ContactProps {
-    /** Active user dictionary selection code string */
     currentLang: LanguageCode;
-    /** Direct translations mapping nodes */
     translations: TranslationSet;
 }
 
-/**
- * Contact Component (Contact Cards, Map Embeds, and Social Media links)
- *
- * Provides structural maps and communication channels.
- * Key Sections:
- * 1. Direct Communication block: Cards mapping Telephone links (WhatsApp), Email redirects, and location addresses.
- * 2. Alternative checkout links (OTAs): Highlights Airbnb, Tiket, and Booking.com.
- * 3. Interactive Location Iframe: Integrates Google Maps embeds mapping GPS location parameters.
- * 4. Social Journal connections: Interactive loops linking active Youtube, Instagram, and Facebook profiles.
- */
 export function Contact({ currentLang, translations }: ContactProps) {
     /**
      * Phone Number Formatter

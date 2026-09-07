@@ -1,26 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Star, Quote } from 'lucide-react';
 import { REVIEWS } from '../../data/villaData';
 import { LanguageCode, TranslationSet } from '../../types';
 import { getDirectImageUrl } from '../../utils/imageUtils';
 
 interface ReviewsProps {
-    /** Active language selection code */
     currentLang: LanguageCode;
-    /** Primary billing or visual translations maps */
     translations: TranslationSet;
 }
 
-/**
- * Reviews Component
- *
- * Cinematic review slider interface exhibiting guest testimonies and ratings.
- * Highlights:
- * 1. Slide Index Controller: Cycles through active testimonies forward/backward.
- * 2. Decorative Quote Backdrop: Clean background quotes framed transparently behind testimonials (`Quote className="text-gold/5"`).
- * 3. Rating Stars Generator: Map loops allocating Lucide-star vectors based under rating metrics.
- * 4. Micro Indicator Dots Tracker: Displays visual bottom bullets linked directly with active indices.
- */
 export function Reviews({ currentLang, translations }: ReviewsProps) {
     // Coordinates current index coordinate pointer inside REVIEWS list datasets
     const [activeIndex, setActiveIndex] = useState<number>(0);

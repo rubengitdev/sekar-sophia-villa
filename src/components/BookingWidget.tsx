@@ -8,18 +8,6 @@ interface BookingWidgetProps {
     translations: TranslationSet;
 }
 
-/**
- * BookingWidget Component
- *
- * This component handles the interactive real-time stay rate calculations and
- * triggers direct customer reservations over WhatsApp with instant quotation logs.
- *
- * Key Pillars of the System:
- * 1. Reactive State Hook: Computes stay parameters on-the-fly when inputs change.
- * 2. Timezone-Resilient Math: Circumvents calendar daylight deviations with strict noon date offsets.
- * 3. Daily Rate Engine: Calculates dates sequentially to apply custom seasonal premiums dynamically.
- * 4. WhatsApp Direct API Dispatcher: Serializes user reservation telemetry into an elegant URL query string.
- */
 export const BookingWidget: FC<BookingWidgetProps> = ({
     currentLang,
     translations,
