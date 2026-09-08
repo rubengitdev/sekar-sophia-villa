@@ -1,0 +1,13 @@
+
+    import { createRequestHandler } from "@netlify/vite-plugin-react-router/edge";
+    import * as build from "../../../build/server/index.js";
+    export default createRequestHandler({ build });
+
+    export const config = {
+      name: "React Router server handler",
+      generator: "@netlify/vite-plugin-react-router@4.0.0",
+      cache: "manual",
+      path: "/*",
+      excludedPath: ["/.netlify/*","/.vite/manifest.json","/assets/App-BsnAcMKr.js","/assets/Deluxe Room (2)-B0-lOJTx.webp","/assets/Desk Twin-BaRelhhs.webp","/assets/Netflix TV-W18d2Fe5.webp","/assets/Standard Bathroom (2)-BhRcgnoF.webp","/assets/Standard Room (2)-Yl9o2325.webp","/assets/Standard Room _ View-DG7pZ95L.webp","/assets/Standard Room-C41i3wS_.webp","/assets/Superior Bathroom (2)-DcigIPJU.webp","/assets/Superior room (2)-DXLB5jQP.webp","/assets/Twin Bathroom-7ESYtyYu.webp","/assets/Twin Bed Room-Bl_dWh6M.webp","/assets/Twin Room-B0727Zux.webp","/assets/entry-Dz8uGC6b.css","/assets/entry.client-BpI91aN6.js","/assets/errorBoundaries-BM4I1esC.js","/assets/indoor-1-DyroCjXX.webp","/assets/indoor-10-BMqsWyTe.webp","/assets/indoor-2-D6DtHnpV.webp","/assets/indoor-3-0ChoT46j.webp","/assets/indoor-4-2qM2bRGq.webp","/assets/indoor-5-D5BgcIi0.webp","/assets/indoor-6-P_t3E-aK.webp","/assets/indoor-7-BytfqakI.webp","/assets/indoor-8-CccGZHyQ.webp","/assets/indoor-9-b5lPrDu8.webp","/assets/jsx-runtime-CDh4pFYb.js","/assets/manifest-bc080b5f.js","/assets/outdoor-1-ChRW1A8E.webp","/assets/outdoor-10-CSfs8DhW.webp","/assets/outdoor-11-CMGF5-Lc.webp","/assets/outdoor-12-CSeXR688.webp","/assets/outdoor-13-SaeydW7R.webp","/assets/outdoor-14-BrIkeBB2.webp","/assets/outdoor-15-FbwcKF6s.webp","/assets/outdoor-16-DSxT1e1l.webp","/assets/outdoor-17-BrBpsSyS.webp","/assets/outdoor-18-D5D4qH6g.webp","/assets/outdoor-19-COBGBgv0.webp","/assets/outdoor-2-7utVNS0U.webp","/assets/outdoor-20-DhC6_Q-a.webp","/assets/outdoor-21-EKfV3dbp.webp","/assets/outdoor-23-Ben19rPk.webp","/assets/outdoor-24-B3r9GAK8.webp","/assets/outdoor-25-BW_UkGNw.webp","/assets/outdoor-26-Q-NY13j4.webp","/assets/outdoor-27-CoDaB9ci.webp","/assets/outdoor-28-Cl6sMBOH.webp","/assets/outdoor-29-BOQnhYES.webp","/assets/outdoor-3-HldQEXye.webp","/assets/outdoor-30-68lP5mJJ.webp","/assets/outdoor-31-BY0sHmD5.webp","/assets/outdoor-32-CUIv-X-K.webp","/assets/outdoor-33-D-Zt9RkO.webp","/assets/outdoor-4-Ca-xKBBC.webp","/assets/outdoor-5-De4VspFD.webp","/assets/outdoor-6-BhkkFpja.webp","/assets/outdoor-7-CMjarYCg.webp","/assets/outdoor-8-tljPF5t9.webp","/assets/outdoor-9-9OE-6FV-.webp","/assets/root-DYacK4Qz.js","/assets/sekarLogo-DaRqU4Xf.png"],
+    };
+    

@@ -2,10 +2,11 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import { defineConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
+import netlify from '@netlify/vite-plugin';
 
 export default defineConfig(() => {
     return {
-        plugins: [reactRouter(), tailwindcss()],
+        plugins: [reactRouter(), tailwindcss(), netlify()],
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, '.'),
