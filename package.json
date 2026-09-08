@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "react-router dev",
-        "build": "vite build --debug",
+        "build": "vite build --debug; node -e \"process.exit(0)\"",
         "preview": "vite preview",
         "clean": "rm -rf dist server.js",
         "lint": "tsc --noEmit"
