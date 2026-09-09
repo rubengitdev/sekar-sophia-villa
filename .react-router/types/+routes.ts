@@ -34,18 +34,25 @@ type RouteFiles = {
     page: "/" | "/about" | "/roomandfacility" | "/gallery" | "/reserve";
   };
   "App.tsx": {
+    id: "App";
+    page: "/" | "/about" | "/roomandfacility" | "/gallery" | "/reserve";
+  };
+  "routes/about.tsx": {
     id: "home";
     page: "/";
   } | {
     id: "about";
     page: "/about";
-  } | {
+  };
+  "routes/roomandfacility.tsx": {
     id: "roomandfacility";
     page: "/roomandfacility";
-  } | {
+  };
+  "routes/gallery.tsx": {
     id: "gallery";
     page: "/gallery";
-  } | {
+  };
+  "routes/reserve.tsx": {
     id: "reserve";
     page: "/reserve";
   };
@@ -53,9 +60,10 @@ type RouteFiles = {
 
 type RouteModules = {
   "root": typeof import("./src/root.tsx");
-  "home": typeof import("./src/App.tsx");
-  "about": typeof import("./src/App.tsx");
-  "roomandfacility": typeof import("./src/App.tsx");
-  "gallery": typeof import("./src/App.tsx");
-  "reserve": typeof import("./src/App.tsx");
+  "App": typeof import("./src/App.tsx");
+  "home": typeof import("./src/routes/about.tsx");
+  "about": typeof import("./src/routes/about.tsx");
+  "roomandfacility": typeof import("./src/routes/roomandfacility.tsx");
+  "gallery": typeof import("./src/routes/gallery.tsx");
+  "reserve": typeof import("./src/routes/reserve.tsx");
 };
