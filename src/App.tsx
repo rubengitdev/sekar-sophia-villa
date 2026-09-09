@@ -1,24 +1,33 @@
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import {
+    Outlet,
+    useLocation,
+    useNavigate,
+    useOutletContext,
+} from 'react-router';
 import { Navbar } from './components/layout/Navbar';
-import { AboutPage } from './pages/AboutPage';
-import { RoomAndFacilityPage } from './pages/RoomAndFacilityPage';
-import { GalleryPage } from './pages/GalleryPage';
-import { ReservePage } from './pages/ReservePage';
+// import { AboutPage } from './pages/AboutPage';
+// import { RoomAndFacilityPage } from './pages/RoomAndFacilityPage';
+// import { GalleryPage } from './pages/GalleryPage';
+// import { ReservePage } from './pages/ReservePage';
 import { LANGUAGES } from './data/villaData';
 import { LanguageCode } from './types';
 import { ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Footer } from './components/layout/Footer';
 
+type VillaContextValue = {
+    currentLang: LanguageCode;
+    translations: (typeof LANGUAGES)['en'];
+    onExploreClick: () => void;
+    onBookClick: () => void;
+};
+
 export default function App() {
     const [currentLang, setCurrentLang] = useState<LanguageCode>('en');
     const translations = LANGUAGES[currentLang];
     const navigate = useNavigate();
     const location = useLocation();
-
-    const activeTab =
-        location.pathname === '/' ? 'about' : location.pathname.slice(1);
 
     /**
      * Smooth Scrolling Facilitator
@@ -55,49 +64,30 @@ export default function App() {
                 translations={translations}
             />
 
-            {/* Main Structural Layout Modules - Grouped beautifully into 4 cohesive views */}
+            {/* Main Structural Layout Modules */}
             <main className="relative z-10 pt-20">
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={activeTab}
+                        key={location.pathname}
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -12 }}
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        {activeTab === 'about' && (
-                            <AboutPage
-                                currentLang={currentLang}
-                                translations={translations}
-                                onExploreClick={() =>
-                                    handleFooterLinkClick('roomandfacility')
-                                }
-                                onBookClick={() =>
-                                    handleFooterLinkClick('reserve')
-                                }
-                            />
-                        )}
-
-                        {activeTab === 'roomandfacility' && (
-                            <RoomAndFacilityPage
-                                currentLang={currentLang}
-                                translations={translations}
-                            />
-                        )}
-
-                        {activeTab === 'gallery' && (
-                            <GalleryPage
-                                currentLang={currentLang}
-                                translations={translations}
-                            />
-                        )}
-
-                        {activeTab === 'reserve' && (
-                            <ReservePage
-                                currentLang={currentLang}
-                                translations={translations}
-                            />
-                        )}
+                        <Outlet
+                            context={
+                                {
+                                    currentLang,
+                                    translations,
+                                    onExploreClick: () =>
+                                        handleFooterLinkClick(
+                                            'roomandfacility',
+                                        ),
+                                    onBookClick: () =>
+                                        handleFooterLinkClick('reserve'),
+                                } satisfies VillaContextValue
+                            }
+                        />
                     </motion.div>
                 </AnimatePresence>
             </main>
@@ -120,4 +110,8 @@ export default function App() {
             </div>
         </div>
     );
+}
+
+export function useVillaContext() {
+    return useOutletContext<VillaContextValue>();
 }
