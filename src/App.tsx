@@ -6,10 +6,6 @@ import {
     useOutletContext,
 } from 'react-router';
 import { Navbar } from './components/layout/Navbar';
-// import { AboutPage } from './pages/AboutPage';
-// import { RoomAndFacilityPage } from './pages/RoomAndFacilityPage';
-// import { GalleryPage } from './pages/GalleryPage';
-// import { ReservePage } from './pages/ReservePage';
 import { LANGUAGES } from './data/villaData';
 import { LanguageCode } from './types';
 import { ChevronUp } from 'lucide-react';
@@ -29,10 +25,7 @@ export default function App() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    /**
-     * Smooth Scrolling Facilitator
-     * Transitions scroll position elegantly back up to the zero vertical coordinate coordinate.
-     */
+    // Smooth Scrolling logic
     const handleScrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -40,10 +33,7 @@ export default function App() {
         });
     };
 
-    /**
-     * Link Hook Router
-     * Performs dual action updates: changes active tab context and targets coordinates to top index on transition.
-     */
+    // Link Hook Router
     const handleFooterLinkClick = (tabId: string) => {
         navigate(tabId === 'about' ? '/' : `/${tabId}`);
         window.scrollTo({
