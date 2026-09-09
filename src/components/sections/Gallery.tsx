@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Maximize } from 'lucide-react';
 import { GALLERY_ITEMS } from '../../data/villaData';
 import { Lightbox } from '../../components/Lightbox';

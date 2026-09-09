@@ -1,11 +1,6 @@
 import { GalleryItem } from '../types';
 
-const outdoorPhotoFiles = import.meta.glob('./photos/gallery/outdoor-*.webp', {
-    eager: true,
-    import: 'default',
-});
-
-const indoorPhotoFiles = import.meta.glob('./photos/gallery/indoor-*.webp', {
+const galleryPhotoFiles = import.meta.glob('./photos/gallery/*.webp', {
     eager: true,
     import: 'default',
 });
@@ -20,27 +15,16 @@ function getSortedPhotoUrls(photoFiles: Record<string, unknown>): string[] {
 }
 
 // Get final sorted list of URLs
-const outdoorUrls = getSortedPhotoUrls(outdoorPhotoFiles);
-const indoorUrls = getSortedPhotoUrls(indoorPhotoFiles);
+const galleryUrls = getSortedPhotoUrls(galleryPhotoFiles);
 
-// Build the outdoor gallery items
-const outdoorItems: GalleryItem[] = [];
-for (let i = 0; i < outdoorUrls.length; i++) {
-    outdoorItems.push({
+// Build the gallery items
+const galleryItems: GalleryItem[] = [];
+for (let i = 0; i < galleryUrls.length; i++) {
+    galleryItems.push({
         id: `g-out-${i + 1}`,
-        url: outdoorUrls[i],
+        url: galleryUrls[i],
         category: 'exterior',
     });
 }
 
-// Build the indoor gallery items
-const indoorItems: GalleryItem[] = [];
-for (let i = 0; i < indoorUrls.length; i++) {
-    indoorItems.push({
-        id: `g-in-${i + 1}`,
-        url: indoorUrls[i],
-        category: 'interior',
-    });
-}
-
-export const GALLERY_ITEMS: GalleryItem[] = [...outdoorItems, ...indoorItems];
+export const GALLERY_ITEMS: GalleryItem[] = [...galleryItems];
